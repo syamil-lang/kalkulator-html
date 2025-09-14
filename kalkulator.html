@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>latihan</title>
+</head>
+<body>
+  <h2>Kalkulator Sederhana</h2>
+  <p>
+    Input Bilangan 1: <input type="number" id="bil1" value="0"><br><br>
+    Input Bilangan 2: <input type="number" id="bil2" value="0"><br><br>
+  </p>
+  <button onclick="hitung('+')">+</button>
+  <button onclick="hitung('-')">-</button>
+  <button onclick="hitung('*')">x</button>
+  <button onclick="hitung('/')">/</button>  <p>output: <span id="output">0</span></p>  <script>
+    function hitung(operator) {
+      var a = parseFloat(document.getElementById('bil1').value);
+      var b = parseFloat(document.getElementById('bil2').value);
+      var output = 0;
+
+      if (operator == '+') output = a + b;
+      else if (operator == '-') output = a - b;
+      else if (operator == '*') output = a * b;
+      else if (operator == '/') output = a / b;
+
+      document.getElementById('output').innerText = output;
+    }
+  </script></body>
+</html>
